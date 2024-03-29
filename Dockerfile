@@ -1,6 +1,4 @@
-ARG SITE_PHP_VERSION
-
-FROM php:${SITE_PHP_VERSION}-alpine
+FROM php:alpine
 
 RUN apk add --update $PHPIZE_DEPS libpng-dev libjpeg-turbo-dev libwebp-dev pngquant mysql-client mariadb-connector-c-dev \
     && pecl install -o -f redis \
